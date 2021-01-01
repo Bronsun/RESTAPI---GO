@@ -1,0 +1,6 @@
+[postgres]
+dbname = "restapi"
+user = "bronson"
+pass = "test1234"
+host = "localhost"
+sslmode = "disable"
