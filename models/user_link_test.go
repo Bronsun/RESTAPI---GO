@@ -692,7 +692,7 @@ func testUserLinksSelect(t *testing.T) {
 }
 
 var (
-	userLinkDBTypes = map[string]string{`ID`: `integer`, `Time`: `timestamp without time zone`, `URL`: `character varying`, `UserID`: `integer`}
+	userLinkDBTypes = map[string]string{`ID`: `integer`, `Status`: `character varying`, `Time`: `timestamp without time zone`, `URL`: `character varying`, `UserID`: `integer`}
 	_               = bytes.MinRead
 )
 

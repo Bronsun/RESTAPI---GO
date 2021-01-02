@@ -23,10 +23,11 @@ import (
 
 // UserLink is an object representing the database table.
 type UserLink struct {
-	ID     int       `boil:"id" json:"id" toml:"id" yaml:"id"`
-	URL    string    `boil:"url" json:"url" toml:"url" yaml:"url"`
-	Time   time.Time `boil:"time" json:"time" toml:"time" yaml:"time"`
-	UserID null.Int  `boil:"user_id" json:"user_id,omitempty" toml:"user_id" yaml:"user_id,omitempty"`
+	ID     int         `boil:"id" json:"id" toml:"id" yaml:"id"`
+	URL    string      `boil:"url" json:"url" toml:"url" yaml:"url"`
+	Time   time.Time   `boil:"time" json:"time" toml:"time" yaml:"time"`
+	UserID null.Int    `boil:"user_id" json:"user_id,omitempty" toml:"user_id" yaml:"user_id,omitempty"`
+	Status null.String `boil:"status" json:"status,omitempty" toml:"status" yaml:"status,omitempty"`
 
 	R *userLinkR `boil:"-" json:"-" toml:"-" yaml:"-"`
 	L userLinkL  `boil:"-" json:"-" toml:"-" yaml:"-"`
@@ -37,11 +38,13 @@ var UserLinkColumns = struct {
 	URL    string
 	Time   string
 	UserID string
+	Status string
 }{
 	ID:     "id",
 	URL:    "url",
 	Time:   "time",
 	UserID: "user_id",
+	Status: "status",
 }
 
 // userLinkR is where relationships are stored.
@@ -53,8 +56,8 @@ type userLinkR struct {
 type userLinkL struct{}
 
 var (
-	userLinkColumns               = []string{"id", "url", "time", "user_id"}
-	userLinkColumnsWithoutDefault = []string{"url", "time"}
+	userLinkColumns               = []string{"id", "url", "time", "user_id", "status"}
+	userLinkColumnsWithoutDefault = []string{"url", "time", "status"}
 	userLinkColumnsWithDefault    = []string{"id", "user_id"}
 	userLinkPrimaryKeyColumns     = []string{"id"}
 )

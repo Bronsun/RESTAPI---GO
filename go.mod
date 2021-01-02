@@ -4,7 +4,9 @@ go 1.15
 
 require (
 	github.com/denisenkom/go-mssqldb v0.9.0 // indirect
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/fsnotify/fsnotify v1.4.9 // indirect
+	github.com/gorilla/mux v1.8.0
 	github.com/kat-co/vala v0.0.0-20170210184112-42e1d8b61f12
 	github.com/lib/pq v1.9.0
 	github.com/magiconair/properties v1.8.4 // indirect
