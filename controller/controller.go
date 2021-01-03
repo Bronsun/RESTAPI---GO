@@ -1,28 +1,28 @@
 package controller
 
 import (
-	"github.com/Bronsun/RESTAPI---GO/models"
-	"context"
-	"encoding/json"
-	"fmt"
-	"io/ioutil"
-	"log"
+	"database/sql"
 	"net/http"
-	"github.com/Bronsun/database"
-	"github.com/Bronsun/models"
-	jwt "github.com/dgrijalva/jwt-go"
-	"golang.org/x/crypto/bcrypt"
+	//. "github.com/volatiletech/sqlboiler/v4/queries/qm"
 )
 
-boil.SetDB(db)
+var db *sql.DB
 
-func RegisterHandler(w http.ResponseWriter, r *http.Request){
-	w.Header().Set("Content-Type", "application/json")
-	var user models.User
+type ResponseResult struct {
+	Error  string `json:"error"`
+	Result string `json:"result"`
+}
 
-	body,_:=ioutil.ReadAll(r.Body)
-	err:=json.Unmarshal(body, &user)
-	var res models.ResponseResult
+func RegisterHandler(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("Not implemented"))
+}
 
+func LoginHandler(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("Not implemented"))
+}
+func AddLinkHandler(w http.ResponseWriter, r *http.Request) {
+
+}
+func CheckLinkHandler(w http.ResponseWriter, r *http.Request) {
 
 }
