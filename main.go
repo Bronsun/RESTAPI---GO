@@ -6,6 +6,7 @@ import (
 	"net/http"
 
 	"github.com/Bronsun/RESTAPI---GO/controller"
+	_ "github.com/Bronsun/RESTAPI---GO/database"
 	"github.com/gorilla/mux"
 	_ "github.com/lib/pq"
 )
